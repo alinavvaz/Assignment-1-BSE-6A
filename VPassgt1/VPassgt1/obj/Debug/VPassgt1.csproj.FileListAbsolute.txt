@@ -1,0 +1,6 @@
+c:\users\ali\documents\visual studio 2013\Projects\VPassgt1\VPassgt1\bin\Debug\VPassgt1.exe.config
+c:\users\ali\documents\visual studio 2013\Projects\VPassgt1\VPassgt1\obj\Debug\VPassgt1.csprojResolveAssemblyReference.cache
+c:\users\ali\documents\visual studio 2013\Projects\VPassgt1\VPassgt1\bin\Debug\VPassgt1.exe
+c:\users\ali\documents\visual studio 2013\Projects\VPassgt1\VPassgt1\bin\Debug\VPassgt1.pdb
+c:\users\ali\documents\visual studio 2013\Projects\VPassgt1\VPassgt1\obj\Debug\VPassgt1.exe
+c:\users\ali\documents\visual studio 2013\Projects\VPassgt1\VPassgt1\obj\Debug\VPassgt1.pdb
