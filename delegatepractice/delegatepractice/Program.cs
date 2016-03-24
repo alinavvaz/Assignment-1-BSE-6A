@@ -4,40 +4,47 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
-
-delegate int Changer(int n);
-namespace delegatepractice
+namespace ConsoleApplication6
 {
-    class Program
+    delegate void Mdelegate(int x, int y);
+
+    delegate void dele(int a, int b);
+    public class Oper
     {
-        static int num = 2;
-        public static int AddNum(int p)
+        public static void Add(int a, int b)
         {
-            num += p;
-            return num;
+            Console.WriteLine("{0} + {1} = {2}", a, b, a + b);
         }
 
-        public static int MultiplyNum(int q)
+        public static void Sub(int a, int b)
         {
-            num *= q;
-            return num;
-        }
-        public static int getNum()
-        {
-            return num;
+            Console.WriteLine("{0} - {1} = {2}", a, b, a - b);
         }
 
-        static void Main(string[] args)
+        public static void Mul(int a, int b)
         {
-            Changer nc1 = new Changer(AddNum);
-            Changer nc2 = new Changer(MultiplyNum);
+            Console.WriteLine("{0} * {1} = {2}", a, b, a * b);
+        }
 
-            nc1(25);
-            Console.WriteLine("Value of Num1=", getNum());
-            nc2(5);
-            Console.WriteLine("Value of Num2=", getNum());
-            Console.ReadKey();
+        public static void Div(int a, int b)
+        {
+            Console.WriteLine("{0} / {1} = {2}", a, b, a / b);
+        }
+    }
+    public class program
+    {
+        static void Main()
+        {
+
+            dele del = new dele(Oper.Add);
+
+            del += new dele(Oper.Sub);
+            del += new dele(Oper.Mul);
+            del += new dele(Oper.Div);
+
+            del(55, 42);
+
+            Console.Read();
         }
     }
 }
