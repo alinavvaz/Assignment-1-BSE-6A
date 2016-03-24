@@ -1,0 +1,6 @@
+c:\users\ali\documents\visual studio 2013\Projects\delegatepractice\delegatepractice\bin\Debug\delegatepractice.exe.config
+c:\users\ali\documents\visual studio 2013\Projects\delegatepractice\delegatepractice\bin\Debug\delegatepractice.exe
+c:\users\ali\documents\visual studio 2013\Projects\delegatepractice\delegatepractice\bin\Debug\delegatepractice.pdb
+c:\users\ali\documents\visual studio 2013\Projects\delegatepractice\delegatepractice\obj\Debug\delegatepractice.exe
+c:\users\ali\documents\visual studio 2013\Projects\delegatepractice\delegatepractice\obj\Debug\delegatepractice.pdb
+c:\users\ali\documents\visual studio 2013\Projects\delegatepractice\delegatepractice\obj\Debug\delegatepractice.csprojResolveAssemblyReference.cache
