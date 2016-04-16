@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication6
 {
-    delegate void Mdelegate(int x, int y);
 
     delegate void dele(int a, int b);
     public class Oper
