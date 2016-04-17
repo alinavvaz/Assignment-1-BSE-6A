@@ -29,27 +29,27 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.IMAGE = new System.Windows.Forms.PictureBox();
+            this.PictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.LocationTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.button3 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.IMAGE)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // IMAGE
+            // PictureBox1
             // 
-            this.IMAGE.Image = ((System.Drawing.Image)(resources.GetObject("IMAGE.Image")));
-            this.IMAGE.Location = new System.Drawing.Point(53, 12);
-            this.IMAGE.Name = "IMAGE";
-            this.IMAGE.Size = new System.Drawing.Size(205, 188);
-            this.IMAGE.TabIndex = 0;
-            this.IMAGE.TabStop = false;
-            this.IMAGE.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox1.Image")));
+            this.PictureBox1.Location = new System.Drawing.Point(1, 0);
+            this.PictureBox1.Name = "PictureBox1";
+            this.PictureBox1.Size = new System.Drawing.Size(257, 229);
+            this.PictureBox1.TabIndex = 0;
+            this.PictureBox1.TabStop = false;
+            this.PictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // button1
             // 
@@ -77,23 +77,24 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(154, 20);
             this.textBox1.TabIndex = 3;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(50, 232);
+            this.label1.Location = new System.Drawing.Point(85, 232);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(84, 13);
             this.label1.TabIndex = 4;
             this.label1.Text = "Enter Data Here";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // textBox2
+            // LocationTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(315, 57);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(313, 20);
-            this.textBox2.TabIndex = 6;
+            this.LocationTextBox.Location = new System.Drawing.Point(315, 57);
+            this.LocationTextBox.Name = "LocationTextBox";
+            this.LocationTextBox.Size = new System.Drawing.Size(313, 20);
+            this.LocationTextBox.TabIndex = 6;
             // 
             // label2
             // 
@@ -122,20 +123,20 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(631, 364);
+            this.ClientSize = new System.Drawing.Size(656, 406);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.LocationTextBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.IMAGE);
+            this.Controls.Add(this.PictureBox1);
             this.Name = "Form1";
             this.Text = "                                                                           STEGAN" +
     "OGRAPH";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.IMAGE)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -143,12 +144,12 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox IMAGE;
+        private System.Windows.Forms.PictureBox PictureBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox LocationTextBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button button3;

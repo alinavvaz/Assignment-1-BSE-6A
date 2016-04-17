@@ -47,14 +47,32 @@ namespace VP_PROJECT
 
         }
 
+
+
+
+
+        // for the functionlity of the browse for image button using the openfiledialog option.
+
         private void button3_Click(object sender, EventArgs e)
         {
             OpenFileDialog open = new OpenFileDialog();
             open.Filter = "ImageFiles(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
-            if (open.ShowDialog()==s
+            if (open.ShowDialog()==DialogResult.OK)
             {
+                PictureBox1.Image= new Bitmap(open.FileName);
+                LocationTextBox.Text = open.FileName;
+            }
+
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+            
                 
             }
         }
-    }
-}
+    
+
