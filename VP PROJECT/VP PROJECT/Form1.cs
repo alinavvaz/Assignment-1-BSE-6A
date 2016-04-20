@@ -17,8 +17,36 @@ namespace VP_PROJECT
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
+
+        // For encoding of text into image.
+        //private void button1_Click(object sender, EventArgs e, int amount)
+        //{
+        //    Bitmap img = new Bitmap(DataTextBox.Text);
+
+        //    int red, green, blue;
+        //for (int i = 0; i < img.Width; i++)
+        //    {
+        //        for (int j = 0; j < img.Height; j++)
+        //        {
+        //            Color C = img.GetPixel(i, j);
+
+        //            red = (C.R + amount > 255) ? 255 : (C.R + amount);
+        //            green = (C.G + amount > 255) ? 255 : (C.G + amount);
+        //            blue = (C.B + amount > 255) ? 255 : (C.B + amount);
+
+        //            Bitmap.GetPixelFormatSize(i, j.color.);
+
+        private void increase()
+
+
+
+
+                }
+                {
+                    
+                }
+            }
+
 
         }
 
