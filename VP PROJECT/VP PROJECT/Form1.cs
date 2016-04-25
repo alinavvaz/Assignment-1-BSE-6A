@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace VP_PROJECT
 {
-    public partial class Form1 : Form
+    public partial class Forms1 : Form
     {
-        public Form1()
+        public Forms1()
         {
             InitializeComponent();
         }
@@ -23,22 +23,17 @@ namespace VP_PROJECT
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int red, green, blue;
 
-            Bitmap img = new Bitmap(DataTextBox.Text);
+            Bitmap img = new Bitmap(PicturexBox1Ali.Image);
 
-        for (int i = 0; i < img.Width; i++)
+            for (int i = 0; i < img.Width; i++)
             {
                 for (int j = 0; j < img.Height; j++)
                 {
-                    Color C = img.GetPixel(i, j);
-                    int amount=0;
-                    red = (C.R + amount > 255) ? 255 : (C.R + amount);
-                    green = (C.G + amount > 255) ? 255 : (C.G + amount);
-                    blue = (C.B + amount > 255) ? 255 : (C.B + amount);
-                    img.SetPixel(i, j, Color.FromArgb(red, green, blue));                   
+                    Console.WriteLine("Width=" + i);
+                    Console.WriteLine("height=" + j);
 
-                    
+
                 }
             }
 
@@ -79,11 +74,12 @@ namespace VP_PROJECT
         private void button3_Click(object sender, EventArgs e)
         {
             OpenFileDialog open = new OpenFileDialog();
-            open.Filter = "ImageFiles(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
-            if (open.ShowDialog()==DialogResult.OK)
+            if (open.ShowDialog() == DialogResult.OK)
             {
-                PictureBox1.Image= new Bitmap(open.FileName);
+                PicturexBox1Ali.Image = new Bitmap(open.FileName);
                 LocationTextBox.Text = open.FileName;
+                MessageBox.Show("Image Opened!");
+            
             }
 
 
@@ -93,9 +89,37 @@ namespace VP_PROJECT
         {
 
         }
+
+        private void fileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void newProgramToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+                PicturexBox1Ali.Image.Save(@"C:\Users\Ali\Downloads");
             
+  
+            {
                 
             }
         }
-    
+
+        private void refreshToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Forms1 form = new Forms1();
+            form.ShowDialog(this);
+
+
+
+        }
+    }
+}
 
