@@ -102,12 +102,20 @@ namespace VP_PROJECT
 
         private void button4_Click(object sender, EventArgs e)
         {
-
-                PicturexBox1Ali.Image.Save(@"C:\Users\Ali\Downloads");
-            
-  
+            SaveFileDialog save = new SaveFileDialog();
+            save.ShowDialog();
+            if (save.ShowDialog() == DialogResult.OK)
             {
-                
+                PicturexBox1Ali.Image = new Bitmap(save.FileName);
+                LocationTextBox.Text = save.FileName;
+                MessageBox.Show("Image Saved!");
+                save.FileName = "Savedimage";
+                save.Filter = "JPeg Image|*.jpg|Bitmap Image|*.bmp|Gif Image|*.gif";
+
+                if (save.ShowDialog() == DialogResult.OK)
+                {
+
+                }
             }
         }
 
