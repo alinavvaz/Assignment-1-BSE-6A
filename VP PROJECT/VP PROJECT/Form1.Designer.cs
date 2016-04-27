@@ -46,18 +46,18 @@
             this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PicturexBox1Ali)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // PicturexBox1Ali
             // 
-            this.PicturexBox1Ali.Location = new System.Drawing.Point(12, 83);
+            this.PicturexBox1Ali.Location = new System.Drawing.Point(12, 27);
             this.PicturexBox1Ali.Name = "PicturexBox1Ali";
-            this.PicturexBox1Ali.Size = new System.Drawing.Size(246, 201);
+            this.PicturexBox1Ali.Size = new System.Drawing.Size(246, 367);
             this.PicturexBox1Ali.TabIndex = 0;
             this.PicturexBox1Ali.TabStop = false;
+            this.toolTip1.SetToolTip(this.PicturexBox1Ali, "Selected Image");
             this.PicturexBox1Ali.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // button1
@@ -85,7 +85,7 @@
             // 
             // DataTextBox
             // 
-            this.DataTextBox.Location = new System.Drawing.Point(354, 137);
+            this.DataTextBox.Location = new System.Drawing.Point(354, 130);
             this.DataTextBox.Name = "DataTextBox";
             this.DataTextBox.Size = new System.Drawing.Size(274, 20);
             this.DataTextBox.TabIndex = 3;
@@ -96,7 +96,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.Menu;
-            this.label1.Location = new System.Drawing.Point(264, 144);
+            this.label1.Location = new System.Drawing.Point(264, 130);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(84, 13);
             this.label1.TabIndex = 4;
@@ -127,7 +127,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(437, 83);
+            this.button3.Location = new System.Drawing.Point(354, 94);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(96, 30);
             this.button3.TabIndex = 8;
@@ -138,7 +138,7 @@
             // 
             // Savebutton
             // 
-            this.Savebutton.Location = new System.Drawing.Point(437, 163);
+            this.Savebutton.Location = new System.Drawing.Point(354, 168);
             this.Savebutton.Name = "Savebutton";
             this.Savebutton.Size = new System.Drawing.Size(96, 29);
             this.Savebutton.TabIndex = 9;
@@ -182,23 +182,11 @@
             this.refreshToolStripMenuItem.ToolTipText = "Refresh Current Form";
             this.refreshToolStripMenuItem.Click += new System.EventHandler(this.refreshToolStripMenuItem_Click);
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label3.Location = new System.Drawing.Point(12, 67);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 13);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "IMAGE";
-            // 
             // Forms1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(656, 406);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.Savebutton);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label2);
@@ -241,7 +229,6 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.ToolStripMenuItem refreshToolStripMenuItem;
-        private System.Windows.Forms.Label label3;
     }
 }
 

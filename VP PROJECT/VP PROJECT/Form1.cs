@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace VP_PROJECT
 {
@@ -103,20 +104,22 @@ namespace VP_PROJECT
         private void button4_Click(object sender, EventArgs e)
         {
             SaveFileDialog save = new SaveFileDialog();
-            save.ShowDialog();
-            if (save.ShowDialog() == DialogResult.OK)
+            //save.ShowDialog();
+            //save.RestoreDirectory = true;
+            //save.Title = "saved image";
+            save.Filter = "image (*.bmp)|*.bmp|PNG Files (*.png)|*.png";
+    
+
+            if (save.ShowDialog()==DialogResult.OK)
             {
-                PicturexBox1Ali.Image = new Bitmap(save.FileName);
-                LocationTextBox.Text = save.FileName;
-                MessageBox.Show("Image Saved!");
-                save.FileName = "Savedimage";
-                save.Filter = "JPeg Image|*.jpg|Bitmap Image|*.bmp|Gif Image|*.gif";
-
-                if (save.ShowDialog() == DialogResult.OK)
-                {
-
-                }
+                PicturexBox1Ali.Image.Save(save.FileName);
+               // LocationTextBox.Text = save.FileName;
+                MessageBox.Show("Image Is Saved Successfully");
             }
+
+
+
+           
         }
 
         private void refreshToolStripMenuItem_Click(object sender, EventArgs e)
@@ -124,9 +127,6 @@ namespace VP_PROJECT
             this.Hide();
             Forms1 form = new Forms1();
             form.ShowDialog(this);
-
-
-
         }
     }
 }
