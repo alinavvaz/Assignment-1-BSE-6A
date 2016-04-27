@@ -33,6 +33,11 @@ namespace VP_PROJECT
                 {
                     Console.WriteLine("Width=" + i);
                     Console.WriteLine("height=" + j);
+                    Color C = new Color();
+                    Console.WriteLine(C.R = "red");
+
+
+
 
 
                 }
