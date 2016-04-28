@@ -26,7 +26,23 @@ namespace VP_PROJECT
         {
 
             Bitmap img = new Bitmap(PicturexBox1Ali.Image);
+            for (int i = 0; i < img.Width; i++)
+            {
+                for (int j = 0; j < img.Height; j++)
+                {
+                    Color C = new Color();
 
+                    if (i<1 && j<DataTextBox.TextLength)
+                    {
+                        
+                    }
+                    Console.WriteLine("Value for R = "+C.R);
+                    Console.WriteLine("Value for G = " + C.G);
+                    Console.WriteLine("Value for B = " + C.B);
+
+
+                }
+            }
 
 
 
