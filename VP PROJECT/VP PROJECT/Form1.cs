@@ -28,28 +28,6 @@ namespace VP_PROJECT
             Bitmap img = new Bitmap(PicturexBox1Ali.Image);
 
 
-            String filename = 
-            for (int i = 0; i < img.Width; i++)
-            {
-                for (int j = 0; j < img.Height; j++)
-                {
-
-
-                    if (i < 1 && j < DataTextBox.Text) 
-                    {
-                        Console.WriteLine("i = " +i);
-                        Console.WriteLine("j = " +j);
-
-                        Color pixels = new Color();
-                        Console.WriteLine("Pixels of RGB are=" +pixels.R +pixels.G +pixels.B);
-
-
-                    }
-
-
-
-                }
-            }
 
 
         }
