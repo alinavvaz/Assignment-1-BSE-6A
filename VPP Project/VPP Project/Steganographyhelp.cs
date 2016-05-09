@@ -143,6 +143,66 @@ namespace VPP_Project
             return img;
 
         }
+            public static string extractText(Bitmap bmp)
+         {
+             int colorUnitIndex = 0;
+             int characterValue = 0;
+
+                //Will hold the data that is extracted out from the image and show as the extracted text.
+             string extractedText = string.Empty;
+
+
+             for (int i = 0; i < bmp.Height; i++)
+             {
+
+
+            //For passing through the rows and columns of the picture that has been chosen by us.
+
+                 for (int j = 0; j < bmp.Width; j++)
+                 {
+
+
+                     Color pixel = bmp.GetPixel(j, i);
+
+            //To pass through the R, G, B values through this loop
+
+                     for (int n = 0; n < 3; n++)
+                     {
+                         switch (colorUnitIndex % 3)
+                         {
+                             case 0:
+                                 {
+
+    //LSB will be taken by pixel.R%2. Now we add one bit to the righmost side of the character by replacing
+//the added bit with the LSB of the pixel by adding characterValue = characterValue*2 to pixel.R,G,B.
+                                     characterValue = characterValue*2 + pixel.R % 2 ;
+                                 }
+                                 break;
+                             case 1:
+                                 {
+                                     characterValue = characterValue * 2 + pixel.G % 2;
+                                 }
+                                 break;
+                             case 2:
+                                 {
+                                     characterValue = characterValue * 2 + pixel.B % 2;
+                                 }
+                                 break;
+
+
+                         }
+
+                         colorUnitIndex++;
+                     }
+                 }
+             }
+
+
+
+
+
+         }
 
     }
+
 }

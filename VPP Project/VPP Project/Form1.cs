@@ -90,5 +90,20 @@ namespace VPP_Project
         {
             this.Close();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+
+       //The Extraction button that is used to decode the text out from the image.
+
+            bmp = (Bitmap)ImagePictureBox.Image;
+
+            string extractedText = Steganographyhelp.extractText(bmp);
+
+            DataTextBox.Text = extractedText;
+
+
+        }
     }
 }
