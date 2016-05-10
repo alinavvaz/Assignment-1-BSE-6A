@@ -193,11 +193,36 @@ namespace VPP_Project
                          }
 
                          colorUnitIndex++;
+
+
+                //If 8 bits have been added then add the current one to the result text.
+
+                         if (colorUnitIndex % 8 == 0)
+
+                         {
+                //Reversing the values since the process happened on the right each time.
+
+                             characterValue = reverseBits(characterValue);
+
+                // can be zero if it is the last character of the 8 zeros added.
+
+                             if (characterValue==0)
+                             {
+                                 return extractedText;
+                             }
+
+                             // convert the character value from int to char
+                             char c = (char)characterValue;
+
+                             // add the current character to the result text
+                             extractedText += c.ToString();
+                         }
                      }
                  }
              }
 
 
+             return extractedText;
 
 
 
