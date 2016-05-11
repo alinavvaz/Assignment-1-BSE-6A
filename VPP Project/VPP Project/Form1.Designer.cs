@@ -40,39 +40,43 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.Note = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.ImagePictureBox)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // ImagePictureBox
             // 
             this.ImagePictureBox.Image = ((System.Drawing.Image)(resources.GetObject("ImagePictureBox.Image")));
-            this.ImagePictureBox.Location = new System.Drawing.Point(15, 43);
+            this.ImagePictureBox.Location = new System.Drawing.Point(12, 19);
             this.ImagePictureBox.Name = "ImagePictureBox";
-            this.ImagePictureBox.Size = new System.Drawing.Size(342, 205);
+            this.ImagePictureBox.Size = new System.Drawing.Size(342, 186);
             this.ImagePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ImagePictureBox.TabIndex = 0;
             this.ImagePictureBox.TabStop = false;
             // 
             // DataTextBox
             // 
-            this.DataTextBox.Location = new System.Drawing.Point(360, 43);
+            this.DataTextBox.Location = new System.Drawing.Point(12, 19);
             this.DataTextBox.Multiline = true;
             this.DataTextBox.Name = "DataTextBox";
-            this.DataTextBox.Size = new System.Drawing.Size(349, 141);
+            this.DataTextBox.Size = new System.Drawing.Size(349, 122);
             this.DataTextBox.TabIndex = 1;
             this.DataTextBox.TextChanged += new System.EventHandler(this.DataTextBox_TextChanged);
             // 
             // menuStrip1
             // 
+            this.menuStrip1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(733, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(735, 24);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -83,27 +87,27 @@
             this.saveToolStripMenuItem,
             this.closeToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.openToolStripMenuItem.Text = "Open Image";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.saveToolStripMenuItem.Text = "Save Image";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // closeToolStripMenuItem
             // 
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.closeToolStripMenuItem.Text = "Close";
             this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
             // 
@@ -112,19 +116,19 @@
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aboutToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(360, 190);
+            this.button3.Location = new System.Drawing.Point(12, 147);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(173, 58);
             this.button3.TabIndex = 2;
@@ -134,7 +138,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(539, 190);
+            this.button4.Location = new System.Drawing.Point(191, 147);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(170, 58);
             this.button4.TabIndex = 3;
@@ -142,44 +146,64 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(478, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 13);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Enter Text For Encryption";
-            // 
             // Note
             // 
             this.Note.AutoSize = true;
-            this.Note.Location = new System.Drawing.Point(12, 262);
+            this.Note.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Note.Location = new System.Drawing.Point(12, 279);
             this.Note.Name = "Note";
-            this.Note.Size = new System.Drawing.Size(33, 13);
+            this.Note.Size = new System.Drawing.Size(50, 16);
             this.Note.TabIndex = 6;
             this.Note.Text = "Note:";
             this.Note.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.button4);
+            this.groupBox1.Controls.Add(this.DataTextBox);
+            this.groupBox1.Controls.Add(this.button3);
+            this.groupBox1.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(360, 43);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(373, 221);
+            this.groupBox1.TabIndex = 7;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Calculations";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.ImagePictureBox);
+            this.groupBox2.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(0, 43);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(366, 221);
+            this.groupBox2.TabIndex = 8;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Image";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(733, 285);
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.ClientSize = new System.Drawing.Size(735, 305);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.Note);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.DataTextBox);
-            this.Controls.Add(this.ImagePictureBox);
             this.Controls.Add(this.menuStrip1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "Steganograph";
+            this.Text = "Steganograph - Hide a secret message in an image!";
             ((System.ComponentModel.ISupportInitialize)(this.ImagePictureBox)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -195,11 +219,12 @@
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.Label Note;
         private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }
 
