@@ -72,6 +72,7 @@ namespace VPP_Project
             {
                 ImagePictureBox.Image.Save(save.FileName);
                 MessageBox.Show("Your Image Has Been Saved Successfully.");
+                DataTextBox.Text = "";
 
             }
         }
