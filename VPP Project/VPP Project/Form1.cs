@@ -15,7 +15,7 @@ namespace VPP_Project
     public partial class Form1 : Form
     {
         private Bitmap bmp = null;
-        private string extractedText = string.Empty;
+        private string extractedText = "";
         public Form1()
         {
             InitializeComponent();
@@ -55,7 +55,7 @@ namespace VPP_Project
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenFileDialog open = new OpenFileDialog();
-            open.Filter = "Image Files (*.jpeg; *.png; *.bmp)|*.jpg; *.png; *.bmp";
+            open.Filter = "Image Filters (*.jpeg; *.png; *.bmp)|*.jpg; *.png; *.bmp";
 
             if (open.ShowDialog() == DialogResult.OK)
             {
