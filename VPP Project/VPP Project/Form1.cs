@@ -61,18 +61,21 @@ namespace VPP_Project
             {
                 ImagePictureBox.Image = Image.FromFile(open.FileName);
             }
+            Note.Text = "Note";
         }
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SaveFileDialog save = new SaveFileDialog();
             save.Filter = "Image Files (*.jpeg; *.png; *.bmp)|*.jpg; *.png; *.bmp";
-            if (save.ShowDialog() == DialogResult.OK) ;
+            if (save.ShowDialog() == DialogResult.OK);
 
             {
                 ImagePictureBox.Image.Save(save.FileName);
                 MessageBox.Show("Your Image Has Been Saved Successfully.");
                 DataTextBox.Text = "";
+                Note.Text = "Note";
+                Note.ForeColor = Color.Black;
 
             }
         }
@@ -94,7 +97,7 @@ namespace VPP_Project
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            Note.Text = "Note: This is your hidden text";
 
        //The Extraction button that is used to decode the text out from the image.
 
@@ -115,6 +118,17 @@ namespace VPP_Project
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+        public bool IsMdiContainer { get; set; }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            IsMdiContainer = true;
         }
     }
 }

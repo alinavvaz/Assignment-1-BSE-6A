@@ -79,6 +79,7 @@
             this.menuStrip1.Size = new System.Drawing.Size(735, 24);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // fileToolStripMenuItem
             // 
@@ -198,6 +199,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Steganograph - Hide a secret message in an image!";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ImagePictureBox)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
