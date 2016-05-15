@@ -15,7 +15,7 @@ namespace VPP_Project
     public partial class Form1 : Form
     {
         private Bitmap bmp = null;
-        private string extractedText = "";
+      //  private string extractedText = "";
         public Form1()
         {
             InitializeComponent();
@@ -129,6 +129,11 @@ namespace VPP_Project
         private void Form1_Load(object sender, EventArgs e)
         {
             IsMdiContainer = true;
+        }
+
+        private void ImagePictureBox_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

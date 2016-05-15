@@ -19,7 +19,7 @@ namespace VPP_Project
             State state = State.Hiding;
             int characterIndex = 0; //holds the index of the character currently being hidden.
             int characterValue = 0; // Holds the value of the character that is converted to integer.
-            long pixelElementIndex = 0;//holds the pixel of the color element (R,G,B ke pixel)
+            long pixelElementIndex = 0;//holds the pixel of the color element (R,G,B pixel)
             int zeros = 0;//will hold the trailing zeros that will be assigned when the process is finished.
 
             int R = 0;             //Will hold the pixel elements on which processing will be done.
@@ -27,7 +27,7 @@ namespace VPP_Project
             int B = 0;
 
 
-            //For loop to pass through the rows and columns
+            //For loop to pass through the rows and columns of the image.
             for (int i = 0; i < img.Height; i++)
             {
                 for (int j = 0; j < img.Width; j++)
@@ -59,11 +59,13 @@ namespace VPP_Project
                                 //Apply last pixel on the image, even only part of it has been affected.
                                 if ((pixelElementIndex - 1) % 3 < 2)
                                 {
-                                    img.SetPixel(j, i, Color.FromArgb(R, G, B));
+                                    img.SetPixel(j, i, Color.FromArgb(R, G, B)); //SETTING DATA ON IMAGE'S RGB VALUE.
                                 }
                                 //Returns the picture with hidden text which is set previously in the upper statement.
                                 return img;
+
                             }
+
                             //To check if all the characters have been hidden in the image.
                             if (characterIndex >= text.Length)
                             {
@@ -71,28 +73,34 @@ namespace VPP_Project
                                 //Add zeros to mark end of text, zeros are added till there are total 8.
                                 state = State.Filling_With_Zeros;
                             }
+
                             else
+
                             {
 
                                 //Move to the next character and start the above process again.
                                 characterValue = text[characterIndex++];
                             }
+
                         }
 
 
                         //Checks which picture element R,G,B has the turn to hide the bit in it's least significant bit.
                         switch (pixelElementIndex % 3)
+
                         {
                             case 0:
                                 {
                                     if (state == State.Hiding)
                                     {
                                         //The right most bit in the character will be (charValue%2). To put this value instead of the LSB
-                                        //of the pixel element just add it to it. Remember that we cleared the LSB of the pixel element
+                                        //of the pixel element just add it to it.
+                                        //Remember that we cleared the LSB of the pixel element
                                         //before this operation being performed.
                                         R += characterValue % 2;
 
-
+                                        //Removes the added bit of the character so that we can reach the next one next time.
+                                        //by dividing characterValue by 2 and assigning the result in characterValue.
                                         characterValue /= 2;
                                     }
                                 }
@@ -105,7 +113,6 @@ namespace VPP_Project
                                         G += characterValue % 2;
 
 
-                                        //Removes the added bit onof the character so that we can reach the next one next time.
                                         characterValue /= 2;
                                     }
                                 }
@@ -142,6 +149,14 @@ namespace VPP_Project
             return img;
 
         }
+
+
+
+
+
+
+    //Extraction Function for getting the data out from the encoded selected picture.
+
         public static string extractText(Bitmap bmp)
         {
             int colorUnitIndex = 0;

@@ -54,17 +54,18 @@
             this.ImagePictureBox.Image = ((System.Drawing.Image)(resources.GetObject("ImagePictureBox.Image")));
             this.ImagePictureBox.Location = new System.Drawing.Point(12, 19);
             this.ImagePictureBox.Name = "ImagePictureBox";
-            this.ImagePictureBox.Size = new System.Drawing.Size(323, 186);
+            this.ImagePictureBox.Size = new System.Drawing.Size(307, 186);
             this.ImagePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ImagePictureBox.TabIndex = 0;
             this.ImagePictureBox.TabStop = false;
+            this.ImagePictureBox.Click += new System.EventHandler(this.ImagePictureBox_Click);
             // 
             // DataTextBox
             // 
             this.DataTextBox.Location = new System.Drawing.Point(12, 19);
             this.DataTextBox.Multiline = true;
             this.DataTextBox.Name = "DataTextBox";
-            this.DataTextBox.Size = new System.Drawing.Size(349, 122);
+            this.DataTextBox.Size = new System.Drawing.Size(298, 122);
             this.DataTextBox.TabIndex = 1;
             this.DataTextBox.TextChanged += new System.EventHandler(this.DataTextBox_TextChanged);
             // 
@@ -76,7 +77,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(735, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(682, 24);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -131,7 +132,7 @@
             // 
             this.button3.Location = new System.Drawing.Point(12, 147);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(173, 58);
+            this.button3.Size = new System.Drawing.Size(149, 58);
             this.button3.TabIndex = 2;
             this.button3.Text = "HIDE";
             this.button3.UseVisualStyleBackColor = true;
@@ -139,9 +140,9 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(191, 147);
+            this.button4.Location = new System.Drawing.Point(161, 147);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(170, 58);
+            this.button4.Size = new System.Drawing.Size(149, 58);
             this.button4.TabIndex = 3;
             this.button4.Text = "EXTRACT";
             this.button4.UseVisualStyleBackColor = true;
@@ -166,7 +167,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(360, 43);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(373, 221);
+            this.groupBox1.Size = new System.Drawing.Size(322, 221);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Calculations";
@@ -178,7 +179,7 @@
             this.groupBox2.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(0, 43);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(366, 221);
+            this.groupBox2.Size = new System.Drawing.Size(343, 221);
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Image";
@@ -189,7 +190,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(735, 305);
+            this.ClientSize = new System.Drawing.Size(682, 313);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.Note);
