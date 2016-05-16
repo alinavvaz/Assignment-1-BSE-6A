@@ -15,7 +15,6 @@ namespace VPP_Project
     public partial class Form1 : Form
     {
         private Bitmap bmp = null;
-      //  private string extractedText = "";
         public Form1()
         {
             InitializeComponent();
@@ -134,6 +133,11 @@ namespace VPP_Project
         private void ImagePictureBox_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

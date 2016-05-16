@@ -175,7 +175,7 @@ namespace VPP_Project
                 for (int j = 0; j < bmp.Width; j++)
                 {
 
-
+                    //Getting the pixels to work on by GetPixel function.
                     Color pixel = bmp.GetPixel(j, i);
 
                     //To pass through the R, G, B values through this loop

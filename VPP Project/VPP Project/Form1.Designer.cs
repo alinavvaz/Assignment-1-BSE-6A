@@ -29,36 +29,26 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.ImagePictureBox = new System.Windows.Forms.PictureBox();
             this.DataTextBox = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.Note = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            ((System.ComponentModel.ISupportInitialize)(this.ImagePictureBox)).BeginInit();
+            this.button1 = new System.Windows.Forms.Button();
+            this.ImagePictureBox = new System.Windows.Forms.PictureBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ImagePictureBox)).BeginInit();
             this.SuspendLayout();
-            // 
-            // ImagePictureBox
-            // 
-            this.ImagePictureBox.Image = ((System.Drawing.Image)(resources.GetObject("ImagePictureBox.Image")));
-            this.ImagePictureBox.Location = new System.Drawing.Point(12, 19);
-            this.ImagePictureBox.Name = "ImagePictureBox";
-            this.ImagePictureBox.Size = new System.Drawing.Size(307, 186);
-            this.ImagePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ImagePictureBox.TabIndex = 0;
-            this.ImagePictureBox.TabStop = false;
-            this.ImagePictureBox.Click += new System.EventHandler(this.ImagePictureBox_Click);
             // 
             // DataTextBox
             // 
@@ -99,13 +89,6 @@
             this.openToolStripMenuItem.Text = "Open Image";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
-            // saveToolStripMenuItem
-            // 
-            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
-            this.saveToolStripMenuItem.Text = "Save Image";
-            this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
-            // 
             // closeToolStripMenuItem
             // 
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
@@ -128,26 +111,6 @@
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(12, 147);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(149, 58);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "HIDE";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(161, 147);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(149, 58);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "EXTRACT";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
             // Note
             // 
             this.Note.AutoSize = true;
@@ -161,16 +124,17 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.DataTextBox);
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(360, 43);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(322, 221);
+            this.groupBox1.Size = new System.Drawing.Size(322, 273);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Calculations";
+            this.groupBox1.Text = "Text Data";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // groupBox2
@@ -184,6 +148,61 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Image";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(227, 223);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(83, 29);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "exit";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // ImagePictureBox
+            // 
+            this.ImagePictureBox.Image = ((System.Drawing.Image)(resources.GetObject("ImagePictureBox.Image")));
+            this.ImagePictureBox.Location = new System.Drawing.Point(12, 19);
+            this.ImagePictureBox.Name = "ImagePictureBox";
+            this.ImagePictureBox.Size = new System.Drawing.Size(307, 186);
+            this.ImagePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ImagePictureBox.TabIndex = 0;
+            this.ImagePictureBox.TabStop = false;
+            this.ImagePictureBox.Click += new System.EventHandler(this.ImagePictureBox_Click);
+            // 
+            // button4
+            // 
+            this.button4.Image = global::VPP_Project.Properties.Resources.Pictogram_output_png_24x24;
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button4.Location = new System.Drawing.Point(168, 170);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(142, 35);
+            this.button4.TabIndex = 3;
+            this.button4.Text = "EXTRACT";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button3
+            // 
+            this.button3.Image = global::VPP_Project.Properties.Resources.Pictogram_input_png_24x24;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button3.Location = new System.Drawing.Point(12, 170);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(142, 35);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "HIDE";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // saveToolStripMenuItem
+            // 
+            this.saveToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.saveToolStripMenuItem.Image = global::VPP_Project.Properties.Resources.save_png_16x16;
+            this.saveToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.saveToolStripMenuItem.Text = "Save Image";
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -201,12 +220,12 @@
             this.Name = "Form1";
             this.Text = "Steganograph - Hide a secret message in an image!";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.ImagePictureBox)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ImagePictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -228,6 +247,7 @@
         private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button button1;
     }
 }
 
