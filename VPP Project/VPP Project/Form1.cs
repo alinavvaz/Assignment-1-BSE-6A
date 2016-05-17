@@ -67,7 +67,7 @@ namespace VPP_Project
         {
             SaveFileDialog save = new SaveFileDialog();
             save.Filter = "Image Files (*.jpeg; *.png; *.bmp)|*.jpg; *.png; *.bmp";
-            if (save.ShowDialog() == DialogResult.OK);
+            if (save.ShowDialog() == DialogResult.OK)
 
             {
                 ImagePictureBox.Image.Save(save.FileName);
