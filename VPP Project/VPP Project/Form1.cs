@@ -20,7 +20,7 @@ namespace VPP_Project
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Hide_Click(object sender, EventArgs e)
         {
             bmp = (Bitmap)ImagePictureBox.Image;
 
@@ -65,17 +65,25 @@ namespace VPP_Project
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SaveFileDialog save = new SaveFileDialog();
-            save.Filter = "Image Files (*.jpeg; *.png; *.bmp)|*.jpg; *.png; *.bmp";
-            if (save.ShowDialog() == DialogResult.OK)
-
+            
+            try
             {
-                ImagePictureBox.Image.Save(save.FileName);
-                MessageBox.Show("Your Image Has Been Saved Successfully.");
-                DataTextBox.Text = "";
-                Note.Text = "Note";
-                Note.ForeColor = Color.Black;
+                SaveFileDialog save = new SaveFileDialog();
+                save.Filter = "Image Files (*.jpeg; *.png; *.bmp)|*.jpg; *.png; *.bmp";
+                if (save.ShowDialog() == DialogResult.OK)
+                {
+                    ImagePictureBox.Image.Save(save.FileName);
+                    MessageBox.Show("Your Image Has Been Saved Successfully.");
+                    DataTextBox.Text = "";
+                    Note.Text = "Note";
+                    Note.ForeColor = Color.Black;
+                    
+                }
 
+            }
+            catch (Exception ee)
+            {
+                MessageBox.Show(ee.Source+""+ee.StackTrace);
             }
         }
 
@@ -94,9 +102,10 @@ namespace VPP_Project
             this.Close();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void Extract_Click(object sender, EventArgs e)
         {
             Note.Text = "Note: This is your hidden text";
+       
 
        //The Extraction button that is used to decode the text out from the image.
 
@@ -105,6 +114,11 @@ namespace VPP_Project
             string extractedText = Steganographyhelp.extractText(bmp);
 
             DataTextBox.Text = extractedText;
+            if (DataTextBox.Text=="")
+            {
+                Note.Text = "Nothing is hidden";
+                MessageBox.Show("No Hidden Text");
+            }
 
 
         }
@@ -135,9 +149,21 @@ namespace VPP_Project
 
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void Exit_Click_1(object sender, EventArgs e)
         {
             this.Close();
         }
+
+
+
+        private void clearScreenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DataTextBox.Text = "";
+            Note.Text = "Note";
+            ImagePictureBox.Image = Image.FromFile("C:/Users/Ali/Desktop/VP PROJECT INFORMATION/Practice Image.PNG");
+            Note.ForeColor = Color.Black; 
+        }
+
+        
     }
 }

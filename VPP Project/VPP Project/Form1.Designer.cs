@@ -32,6 +32,7 @@
             this.DataTextBox = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clearScreenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -39,9 +40,9 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Note = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.Exit = new System.Windows.Forms.Button();
+            this.Extract = new System.Windows.Forms.Button();
+            this.Hide = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.ImagePictureBox = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
@@ -67,7 +68,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(682, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(701, 24);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -75,6 +76,7 @@
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.clearScreenToolStripMenuItem,
             this.openToolStripMenuItem,
             this.saveToolStripMenuItem,
             this.closeToolStripMenuItem});
@@ -82,10 +84,17 @@
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
             this.fileToolStripMenuItem.Text = "File";
             // 
+            // clearScreenToolStripMenuItem
+            // 
+            this.clearScreenToolStripMenuItem.Name = "clearScreenToolStripMenuItem";
+            this.clearScreenToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.clearScreenToolStripMenuItem.Text = "Clear Screen";
+            this.clearScreenToolStripMenuItem.Click += new System.EventHandler(this.clearScreenToolStripMenuItem_Click);
+            // 
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.openToolStripMenuItem.Text = "Open Image";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
@@ -95,14 +104,14 @@
             this.saveToolStripMenuItem.Image = global::VPP_Project.Properties.Resources.save_png_16x16;
             this.saveToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.saveToolStripMenuItem.Text = "Save Image";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // closeToolStripMenuItem
             // 
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.closeToolStripMenuItem.Text = "Close";
             this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
             // 
@@ -117,7 +126,7 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -134,52 +143,52 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.button4);
+            this.groupBox1.Controls.Add(this.Exit);
+            this.groupBox1.Controls.Add(this.Extract);
             this.groupBox1.Controls.Add(this.DataTextBox);
-            this.groupBox1.Controls.Add(this.button3);
+            this.groupBox1.Controls.Add(this.Hide);
             this.groupBox1.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(360, 43);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(322, 273);
+            this.groupBox1.Size = new System.Drawing.Size(329, 265);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Text Data";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // button1
+            // Exit
             // 
-            this.button1.Location = new System.Drawing.Point(227, 223);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(83, 29);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "exit";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.Exit.Location = new System.Drawing.Point(227, 223);
+            this.Exit.Name = "Exit";
+            this.Exit.Size = new System.Drawing.Size(83, 29);
+            this.Exit.TabIndex = 4;
+            this.Exit.Text = "exit";
+            this.Exit.UseVisualStyleBackColor = true;
+            this.Exit.Click += new System.EventHandler(this.Exit_Click_1);
             // 
-            // button4
+            // Extract
             // 
-            this.button4.Image = global::VPP_Project.Properties.Resources.Pictogram_output_png_24x24;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.Location = new System.Drawing.Point(168, 170);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(142, 35);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "EXTRACT";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.Extract.Image = global::VPP_Project.Properties.Resources.Pictogram_output_png_24x24;
+            this.Extract.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Extract.Location = new System.Drawing.Point(168, 170);
+            this.Extract.Name = "Extract";
+            this.Extract.Size = new System.Drawing.Size(142, 35);
+            this.Extract.TabIndex = 3;
+            this.Extract.Text = "EXTRACT";
+            this.Extract.UseVisualStyleBackColor = true;
+            this.Extract.Click += new System.EventHandler(this.Extract_Click);
             // 
-            // button3
+            // Hide
             // 
-            this.button3.Image = global::VPP_Project.Properties.Resources.Pictogram_input_png_24x24;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.Location = new System.Drawing.Point(12, 170);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(142, 35);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "HIDE";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button1_Click);
+            this.Hide.Image = global::VPP_Project.Properties.Resources.Pictogram_input_png_24x24;
+            this.Hide.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Hide.Location = new System.Drawing.Point(12, 170);
+            this.Hide.Name = "Hide";
+            this.Hide.Size = new System.Drawing.Size(142, 35);
+            this.Hide.TabIndex = 2;
+            this.Hide.Text = "HIDE";
+            this.Hide.UseVisualStyleBackColor = true;
+            this.Hide.Click += new System.EventHandler(this.Hide_Click);
             // 
             // groupBox2
             // 
@@ -209,7 +218,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(682, 313);
+            this.ClientSize = new System.Drawing.Size(701, 325);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.Note);
@@ -239,15 +248,16 @@
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button Hide;
+        private System.Windows.Forms.Button Extract;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.Label Note;
         private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Exit;
+        private System.Windows.Forms.ToolStripMenuItem clearScreenToolStripMenuItem;
     }
 }
 
